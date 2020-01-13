@@ -1,13 +1,77 @@
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+* {
+  padding: 0;
+  margin: 0;
 }
-th, td {
-  padding: 5px;
+h1, h3 {
+  text-align: center;
 }
-tbody tr:nth-child(odd) td:nth-child(5) {
-  background-color: green;
+body {
+  background-color: orange;
+  padding: 9px;
+  height: 97vh;
+  width: 98.5vw;
 }
-tbody tr:nth-child(even) td:nth-child(6) {
-  background-color: red;
+main {
+  height: 76%;
+  width: 100%;
+}
+.column.side, .column.middle {
+  width: 100%;
+}
+.column {
+  float: left;
+  border-radius: 10px;
+  height: 100%;
+  border: 3px solid grey;
+}
+.column.side {
+  width: 19.3%;
+  background-color: #c8c8c8;
+}
+.column.middle {
+  width: 58%;
+  background-color: #c8c8c8;
+}
+.lower {
+  height: 9%;
+  width: 99.6%;
+  background-color: #c8c8c8;
+  border-radius: 10px;
+  margin-top: 1%;
+  border: 3px solid grey;
+}
+.upper {
+  background-color: #c8c8c8;
+  height: 9.4%;
+  width: 99.6%;
+  border-radius: 10px;
+  margin-bottom: 1%;
+  border: 3px solid grey;
+}
+section header {
+  background-color: #c8c8c8;
+  padding: 15px;
+  margin: 10px 15px 10px;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+section article {
+  background-color: #c8c8c8;
+  padding: 125px;
+  margin: 10px 15px 10px;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+section footer {
+  background-color: #c8c8c8;
+  padding: 15px;
+  margin: 10px 15px 10px;
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+nav {
+  margin-right: 1%;
+}
+aside {
+  margin-left: 1%;
 }
