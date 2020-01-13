@@ -15,63 +15,49 @@ main {
   height: 76%;
   width: 100%;
 }
-.column.side, .column.middle {
-  width: 100%;
-}
 .column {
   float: left;
-  border-radius: 10px;
   height: 100%;
-  border: 3px solid grey;
+  background-color: #c8c8c8;
 }
-.column.side {
+.side {
   width: 19.3%;
-  background-color: #c8c8c8;
 }
-.column.middle {
+.middle {
   width: 58%;
-  background-color: #c8c8c8;
 }
 .lower {
   height: 9%;
   width: 99.6%;
-  background-color: #c8c8c8;
-  border-radius: 10px;
   margin-top: 1%;
-  border: 3px solid grey;
 }
 .upper {
-  background-color: #c8c8c8;
   height: 9.4%;
   width: 99.6%;
-  border-radius: 10px;
   margin-bottom: 1%;
-  border: 3px solid grey;
 }
 section header {
-  background-color: #c8c8c8;
   padding: 15px;
-  margin: 10px 15px 10px;
-  border-radius: 10px;
-  border: 3px solid grey;
 }
 section article {
-  background-color: #c8c8c8;
   padding: 125px;
-  margin: 10px 15px 10px;
+}
+section footer {
+  padding: 15px;
+}
+.border {
   border-radius: 10px;
   border: 3px solid grey;
 }
-section footer {
-  background-color: #c8c8c8;
-  padding: 15px;
+.margin {
   margin: 10px 15px 10px;
-  border-radius: 10px;
-  border: 3px solid grey;
 }
 nav {
   margin-right: 1%;
 }
 aside {
   margin-left: 1%;
+}
+.color {
+  background-color: #c8c8c8;
 }
