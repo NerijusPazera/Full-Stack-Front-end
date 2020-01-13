@@ -1,0 +1,16 @@
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+}
+tbody tr:nth-child(1) td:nth-child(5) {
+  background-color: green;
+}
+tbody tr:nth-child(2) td:nth-child(6) {
+  background-color: red;
+}
+tbody tr:nth-child(3) td:nth-child(5) {
+  background-color: green;
+}
