@@ -52,12 +52,9 @@ section footer {
 .margin {
   margin: 10px 15px 10px;
 }
-nav {
-  margin-right: 1%;
-}
-aside {
-  margin-left: 1%;
-}
 .color {
   background-color: #c8c8c8;
+}
+section {
+  margin: 0 1%;
 }
