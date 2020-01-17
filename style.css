@@ -1,54 +1,114 @@
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
-  font-size: 0;
-}
-h3 {
-  text-align: center;
-  font-size: 25px;
 }
 body {
-  height: 100vh;
-  width: 100vw;
-  border: 10px solid purple;
+  padding: 0;
+  margin: 0;
+  background-color: #f0f0f0;
 }
-header {
-  height: 13%;
-  border-bottom: 5px solid purple;
-}
-nav{
-  height: 13%;
-  border-top: 5px solid purple;
-  border-bottom: 5px solid purple;
-}
-main {
-  height: 61%;
-  border-top: 5px solid purple;
-  border-bottom: 5px solid purple;
-}
-div {
-  display: inline-block;
+.wrapper {
+  padding: 0 150px;
+  margin-bottom: 40px;
+  width: 100%;
   height: 100%;
-  width: 60%;
-  border-right: 5px solid purple;
+}
+h1 {
+  padding: 0 150px;
+}
+h2 {
+  padding-top: 40px;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+header, footer {
+  height: 15vh;
+  background-color: #d7c39b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header img {
+  width: 50px;
+}
+header div {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+}
+nav {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+nav div {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+article img {
+  width: 280px;
+  float: right;
+  margin-left: 10px;
+}
+article {
+  background-color: #faebeb;
+  border-bottom: 1px solid black;
+}
+ul {
+  list-style: none;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: calc(50% - 5px);
+  padding: 15px;
+  margin: 40px 0 0;
+}
+li {
+  padding-top: 10px;
+  border-bottom: 1px solid black;
+}
+.lists {
+  display: flex;
+  justify-content: space-between;
+}
+.stock_art {
+  background-color: #faebeb;
 }
 section {
-  height: 50%;
-  border-bottom: 5px solid purple;
+  border-bottom: 1px solid black;
 }
-article{
-  height: 50%;
-  border-top: 5px solid purple;
+.round_img {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+  border-radius: 100px;
+  margin-top: 30px;
+  background-size: cover;
+  background-position: center;
 }
-aside {
-  display: inline-block;
-  height: 100%;
-  width: 40%;
-  border-left: 5px solid purple;
-  vertical-align: top;
+.img_1 {
+  background-image: url('https://www.therovingschool.com.au/wp-content/uploads/2018/10/abstract-art-artistic-935785.jpg');
 }
-footer {
-  height: 13%;
-  border-top: 5px solid purple;
+.img_2 {
+  background-image: url("https://images.fineartamerica.com/images-medium-large-5/abstract-art-original-whimsical-modern-landscape-painting-bursting-forth-by-madart-megan-duncanson.jpg");
+}
+.img_3 {
+  background-image: url("http://secureservercdn.net/198.71.233.179/6mo.d98.myftpupload.com/wp-content/uploads/2019/07/origin.jpg?time=1571817814");
+}
+.img_4 {
+  background-image: url("https://cdn.steemitimages.com/DQmPgK575YnZP6uWG3iDMqPicEqrrwgVgSGTPmo1SqSpxS8/3402463-KNVHBTVS-7.jpg");
+}
+.img_5 {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/jbCNvTM4gwr2qV8X8fW3ZB.png");
+}
+.img_6 {
+  background-image: url("https://www.markchadwick.co.uk/wp-content/uploads/2017/08/Spin-Painting-33-1000x1073.jpg");
+}
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
