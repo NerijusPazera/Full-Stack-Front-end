@@ -1,21 +1,44 @@
 'use strict';
 
-const shoppingCart = {
-  beer: 5,
-  nuts: 3
+const rapLyrics = [
+  {
+    word: 'dirty',
+    naughty: false
+  },
+  {
+    word: 'bitch',
+    naughty: true
+  },
+  {
+    word: 'money',
+    naughty: false
+  },
+  {
+    word: 'guns',
+    naughty: false
+  },
+  {
+    word: 'coke',
+    naughty: true
+  }
+]
+
+const input = prompt('Enter your age:');
+const result = Number(input) < 18 ? rapLyrics.filter(censor):
+rapLyrics;
+
+function censor(value) {
+  return !value.naughty;
 }
 
-let answer;
-
-do {
-  let productName = prompt('Pasirinkite produkta:');
-  let productQty = prompt('Pasirinkite produkto kieki:');
-
-  shoppingCart[productName] = productQty;
-
-  answer = prompt('Ar norite prideti kita produkta ? Y- taip, N- ne');
-} while (answer === 'Y');
-
-for (let key in shoppingCart) {
-  alert(`${key} - ${shoppingCart[key]}`);
+function getWords(value) {
+  return value.word;
 }
+
+const lyrics = result.map(getWords);
+
+const p = document.createElement('p');
+const text = document.createTextNode(lyrics.join(' '));
+
+p.appendChild(text);
+document.body.appendChild(p);
