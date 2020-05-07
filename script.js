@@ -1,44 +1,42 @@
 'use strict';
 
-const rapLyrics = [
-  {
-    word: 'dirty',
-    naughty: false
-  },
-  {
-    word: 'bitch',
-    naughty: true
-  },
-  {
-    word: 'money',
-    naughty: false
-  },
-  {
-    word: 'guns',
-    naughty: false
-  },
-  {
-    word: 'coke',
-    naughty: true
+function onKey() {
+  const value = event.target.value.trim();
+  const ul = document.querySelector('ul');
+
+  if (event.keyCode === 13 && value) {
+    const li = createListElement(value);
+
+    ul.appendChild(li);
+    input.value = '';
   }
-]
-
-const input = prompt('Enter your age:');
-const result = Number(input) < 18 ? rapLyrics.filter(censor):
-rapLyrics;
-
-function censor(value) {
-  return !value.naughty;
 }
 
-function getWords(value) {
-  return value.word;
+function removeLi() {
+  event.target.closest('li').remove();
 }
 
-const lyrics = result.map(getWords);
+function createListElement(value) {
+  const li = document.createElement('li');
+  const textNode = document.createTextNode(value + ' ');
+  const button = createButton();
 
-const p = document.createElement('p');
-const text = document.createTextNode(lyrics.join(' '));
+  li.appendChild(textNode);
+  li.appendChild(button);
 
-p.appendChild(text);
-document.body.appendChild(p);
+  return li;
+}
+
+function createButton() {
+  const button = document.createElement('button');
+  const textNode = document.createTextNode('Delete');
+
+  button.appendChild(textNode);
+  button.addEventListener('click', removeLi);
+
+  return button;
+}
+
+const input = document.querySelector('input[name=name]');
+
+input.addEventListener('keyup', onKey);
