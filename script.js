@@ -19,22 +19,28 @@ function removeLi() {
 function createListElement(value) {
   const li = document.createElement('li');
   const textNode = document.createTextNode(value + ' ');
-  const button = createButton();
+  const buttonDelete = createButton('Delete', removeLi);
+  const buttonEdit = createButton('Edit', editItem);
 
   li.appendChild(textNode);
-  li.appendChild(button);
+  li.appendChild(buttonDelete);
+  li.appendChild(buttonEdit);
 
   return li;
 }
 
-function createButton() {
+function createButton(text, handler) {
   const button = document.createElement('button');
-  const textNode = document.createTextNode('Delete');
+  const textNode = document.createTextNode(text);
 
   button.appendChild(textNode);
-  button.addEventListener('click', removeLi);
+  button.addEventListener('click', handler);
 
   return button;
+}
+
+function editItem() {
+  console.log('Works !');
 }
 
 const input = document.querySelector('input[name=name]');
