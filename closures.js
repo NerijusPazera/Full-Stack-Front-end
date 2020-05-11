@@ -14,7 +14,3 @@ function fullNameGenerator(firstName, lastName) {
 }
 
 const user1 = fullNameGenerator('Nerijus', 'Pazera');
-
-console.log(user1.getFullName());
-user1.changeFirstName('Nerka');
-console.log(user1.getFullName());

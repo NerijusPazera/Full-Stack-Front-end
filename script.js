@@ -12,14 +12,10 @@ function onKey() {
   }
 }
 
-function removeLi() {
-  event.target.closest('li').remove();
-}
-
 function createListElement(value) {
   const li = document.createElement('li');
-  const textNode = document.createTextNode(value + ' ');
-  const buttonDelete = createButton('Delete', removeLi);
+  let textNode = document.createTextNode(value);
+  const buttonDelete = createButton('Delete', deleteItem);
   const buttonEdit = createButton('Edit', editItem);
 
   li.appendChild(textNode);
@@ -39,10 +35,42 @@ function createButton(text, handler) {
   return button;
 }
 
-function editItem() {
-  console.log('Works !');
+function deleteItem(event) {
+  const closestLi = event.target.closest('li');
+
+  function removeLi() {
+    closestLi.remove();
+  }
+
+  setTimeout(removeLi, 1000);
+  closestLi.style.opacity = '0';
+  closestLi.style.transition = '1s';
+  closestLi.style.transform = 'translateX(250%)';
 }
 
-const input = document.querySelector('input[name=name]');
+function editItem(event) {
+  const listItem = event.target.closest('li').firstChild;
+  console.log(event.target);
+
+  function getEditInput(event) {
+    const value = edit.value.trim();
+
+    if (event.keyCode === 13 && value) {
+      listItem.textContent = value;
+      edit.style.display = 'none';
+      edit.removeEventListener('keyup', getEditInput);
+    }
+  }
+
+  edit.addEventListener('keyup', getEditInput);
+  edit.style.display = 'block';
+  edit.value = listItem.nodeValue;
+  edit.focus();
+  edit.select();
+}
+
+
+const input = document.querySelector('input[name=todo]');
+const edit = document.querySelector('input[name=edit]');
 
 input.addEventListener('keyup', onKey);

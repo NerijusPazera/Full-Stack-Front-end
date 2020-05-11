@@ -9,3 +9,15 @@ body {
 li {
   text-transform: capitalize;
 }
+
+input[name=edit] {
+  display: none;
+}
+
+input.show {
+  display: block;
+}
+
+button {
+  margin: 5px;
+}
