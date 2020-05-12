@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>JS Basics</title>
-    <link rel="stylesheet" href="style.css">
-    <script src='app.js' defer></script>
-  </head>
-  <body>
-    <input type="text" name="name">
-    <button name="full">Pilnas Vardas</button>
-    <button name="vowels">Balses</button>
-    <button name="consonants">Priebalses</button>
-    <h1></h1>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="chat.js" defer></script>
+</head>
+<body>
+  <main class="chat-container">
+    <article class="message self">
+      <section class="image"></section>
+      <section class="chat-bubble">
+        <p>Lorem ipsum dolor</p>
+      </section>
+    </article>
+
+    <article class="message contact">
+      <section class="image"></section>
+      <section class="chat-bubble">
+        <p>Lorem ipsum dolor</p>
+        <p>Lorem ipsum dolor sit</p>
+      </section>
+    </article>
+
+  </main>
+  <div class="message-container">
+    <textarea></textarea>
+    <button>Send</button>
+  </div>
+</body>
 </html>
