@@ -50,7 +50,6 @@ function deleteItem(event) {
 
 function editItem(event) {
   const listItem = event.target.closest('li').firstChild;
-  console.log(event.target);
 
   function getEditInput(event) {
     const value = edit.value.trim();

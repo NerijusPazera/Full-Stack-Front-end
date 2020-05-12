@@ -20,4 +20,9 @@ input.show {
 
 button {
   margin: 5px;
+  display: none;
+}
+
+h1 {
+  text-transform: uppercase;
 }
