@@ -1,17 +1,28 @@
 'use strict';
 
-const popUp = document.querySelector('.pop-up');
-const body = document.querySelector('body');
-const main = document.querySelector('main');
+document.addEventListener('mouseleave', catchMouse);
 
-function showPopUp() {
-  popUp.style.display = 'block';
-  body.removeEventListener('mouseleave', showPopUp);
+let popupListener;
+let popup;
+
+function catchMouse() {
+  showPopup();
+  document.removeEventListener('mouseleave', catchMouse);
+}
+
+function showPopup() {
+  popup = document.querySelector('.pop-up');
+
+  popup.style.display = 'block';
+
+  popupListener = document.addEventListener('click', (event) => {
+    if (!event.target.closest('.pop-up')) {
+      hidePopup();
+    }
+  });
 };
 
-function hidePopUp() {
-  popUp.style.display= 'none';
-};
-
-body.addEventListener('mouseleave', showPopUp);
-main.addEventListener('click', hidePopUp);
+function hidePopup() {
+  popup.style.display= 'none';
+  document.removeEventListener('click', popupListener);
+}
