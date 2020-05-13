@@ -1,6 +1,5 @@
-'use strict'
+'use strict';
 
-const h1 = document.body.appendChild(document.createElement('h1'));
 const button = document.querySelector('button');
 
 button.addEventListener('click', e => {
