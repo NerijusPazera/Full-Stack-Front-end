@@ -6,5 +6,3 @@ class Bimmer extends Car{
     super(bimmer, 30);
   }
 }
-
-const bimmer = new Bimmer();
