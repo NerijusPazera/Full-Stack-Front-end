@@ -8,6 +8,7 @@ class Car {
     this.speed = speed;
     this.carName = carName,
     this.carName.style.display = 'block';
+    this.controls = [];
 
     this.render();
 
@@ -48,16 +49,16 @@ class Car {
 
   move = (e) => {
     switch (e.keyCode) {
-      case 38:
+      case this.controls[0]:
         this.moveUp();
         break;
-      case 40:
+      case this.controls[1]:
         this.moveDown();
         break;
-      case 37:
+      case this.controls[2]:
         this.moveLeft();
         break;
-      case 39:
+      case this.controls[3]:
         this.moveRight();
         break;
     }
