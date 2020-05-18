@@ -1,24 +1,23 @@
-'use strict';
-
-class Car {
+export default class Car {
   constructor(carName, speed, positionX = 0, positionY = 0, rotation = 180) {
-    this.positionX = positionX,
-    this.positionY = positionY,
-    this.rotation = rotation,
+    this.positionX = positionX;
+    this.positionY = positionY;
+    this.rotation = rotation;
     this.speed = speed;
-    this.carName = carName,
+    this.carName = carName;
     this.carName.style.display = 'block';
     this.controls = [];
+    this.move = this.move.bind(this);
 
     this.render();
+
+    addEventListener('keydown', this.move);
 
     addEventListener('keydown', e => {
       if (e.keyCode === 80) {
         this.pedalToTheMetal(document.body.children[0].clientWidth);
       }
     })
-
-    addEventListener('keydown', this.move);
   }
 
   moveLeft() {
@@ -47,7 +46,7 @@ class Car {
     this.carName.style.transform = `rotate(${this.rotation}deg)`;
   }
 
-  move = (e) => {
+  move(e) {
     switch (e.keyCode) {
       case this.controls[0]:
         this.moveUp();
