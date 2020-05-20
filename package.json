@@ -1,6 +1,6 @@
 {
-  "name": "JavaScript-drag-strip-project",
-  "description": "Moving cars with different controls",
+  "name": "JavaScript-new-project",
+  "description": "New project",
   "main": "app.js",
   "version": "1.0.0",
   "devDependencies": {

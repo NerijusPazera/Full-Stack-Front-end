@@ -1,10 +1,11 @@
 'use strict';
 
-import Bimmer from "./Bimmer";
-import RedCar from "./RedCar";
+import {App} from "./App";
+import {hyperscript} from "./hyperscript";
+import {mount} from "./mount";
 
-export const bimmerControls = [38, 40, 37, 39];
-export const redCarControls = [87, 83, 65, 68];
+const h1 = hyperscript('h1', {class: 'title'}, 'Hello World');
+const button = hyperscript('button', {class: 'btn'}, 'Press Me');
+export const div = hyperscript('div', {class: 'container', style: 'height: 200px; border: 1px solid black;'}, h1, button);
 
-const bimmer = new Bimmer();
-const redCar = new RedCar();
+mount(hyperscript(App), document.getElementById('app'));
