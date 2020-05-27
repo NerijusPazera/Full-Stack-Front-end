@@ -6,6 +6,6 @@ import {renderNode} from "./renderNode";
  * @param parent
  */
 export function mount(vNode, parent) {
-    const $node = renderNode(vNode);
-    parent.appendChild($node);
+  const $node = renderNode(vNode);
+  parent.appendChild($node);
 }

@@ -5,6 +5,8 @@
  * @param children
  * @returns {{nodeName: *, children: *[], attributes: {}}}
  */
-export function hyperscript(nodeName, attributes = {}, ...children) {
-    return {nodeName, attributes, children};
+function hyperscript(nodeName, attributes = {}, ...children) {
+  return {nodeName, attributes, children};
 }
+
+export {hyperscript as h};

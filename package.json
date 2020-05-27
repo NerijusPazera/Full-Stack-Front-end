@@ -1,6 +1,6 @@
 {
   "name": "JavaScript-new-project",
-  "description": "New project",
+  "description": "HTML node generation",
   "main": "app.js",
   "version": "1.0.0",
   "devDependencies": {
