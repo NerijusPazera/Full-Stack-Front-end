@@ -26,16 +26,16 @@ export default class App extends Component {
   }
 
   render() {
-    const array = this.state.todos.map((todo, id) => h('div', {}, todo,
-          h(Button, {name: 'delete', handler: this.handleDelete, key: id})
+    const array = this.state.todos.map((todo, id) => h('li', {},
+        todo,
+        h(Button, {name: 'delete', handler: this.handleDelete, key: id})
     ));
-
 
     return h(
         'main', {},
         h('h1', {}, this.state.title),
         h(Input, {handler: this.handleInput}),
-        ...array,
+        h('ul', {class: 'to-do-list'}, ...array)
     );
   }
 }

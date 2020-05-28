@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin-top: 5px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
