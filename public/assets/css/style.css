@@ -2,10 +2,18 @@
   box-sizing: border-box;
 }
 
-ul {
+.to-do-list {
   margin-top: 5px;
 }
 
-ul li {
+.list-item {
   margin-bottom: 5px;
+  text-transform: capitalize;
 }
+
+.delete-btn {
+  margin-left: 5px;
+}
+
+.list-item input {
+ }
