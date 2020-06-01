@@ -12,13 +12,13 @@ export default class Button extends Component {
   }
 
   render() {
-      return h(
-          'button',
-          {
-            click: this.idHandler,
-            class: this.props.class
-          },
-          this.state.buttonName
-      )
+    return h(
+        'button',
+        {
+          click: this.idHandler,
+          class: this.props.class
+        },
+        this.state.buttonName
+    )
   }
 }

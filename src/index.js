@@ -1,6 +1,9 @@
 'use strict';
 
-import App from "./components/App";
 import {mount, h} from "./vdom/bootloader";
+import Navigation from "./components/Navigation";
 
-mount(h(App), document.querySelector('body'));
+const nav = document.getElementById('navigation-container');
+const main = document.getElementById('main');
+
+mount(h(Navigation), nav);
