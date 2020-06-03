@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@100&display=swap");
+
+*:not(i) {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  height: 5vh;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.burger-line {
+  height: 5px;
+  width: 100%;
+  background-color: black;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.burger-line:nth-child(1) {
+  transition: 0.3s;
+  top: 0;
+}
+
+.burger-line:nth-child(2) {
+  transition: 0.1s;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger-line:nth-child(3) {
+  transition: 0.5s;
+  bottom: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-img {
+  height: 30px;
+  width: 30px;
+  background: url("https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/PistonHeads_logo.svg/1200px-PistonHeads_logo.svg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: gray;
+  height: 5vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  border: 1px solid grey;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #d2d2d2;
+  position: relative;
+}
+
+article:first-of-type {
+  margin-top: 5px;
+}
+
+input {
+  display: block;
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 50%;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+}

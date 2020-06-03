@@ -1,8 +1,0 @@
-@use 'reset';
-@use 'underline';
-
-.container {
-  display: grid;
-  grid: auto-flow / repeat(4, 1fr);
-  grid-column-gap: 20px;
-}
