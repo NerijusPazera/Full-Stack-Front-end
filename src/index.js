@@ -2,8 +2,10 @@
 
 import {mount, h} from "./vdom/bootloader";
 import Navigation from "./components/Navigation";
+import {Main} from "./components/Main";
 
-const nav = document.getElementById('navigation-container');
+const header = document.querySelector('header');
 const main = document.getElementById('main');
 
-mount(h(Navigation), nav);
+mount(h(Navigation), header);
+mount(h(Main), main);
