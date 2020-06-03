@@ -1,0 +1,37 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(black, red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 25%;
+  border: 1px solid black;
+  background: #7a7b4a;
+  border-radius: 10px;
+}
+span {
+  display: block;
+}
+.input-block {
+  margin: 5px;
+}
+textarea {
+  width: 44%;
+  height: 100px;
+  resize: none;
+}
+input[type="submit"] {
+  border-radius: 10px;
+}
+input[type="submit"]:hover {
+  background: #7a7b4a;
+}
+input {
+  outline: none;
+}

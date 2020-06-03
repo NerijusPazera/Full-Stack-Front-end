@@ -1,0 +1,74 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+.chat-box {
+  padding-top: 30px;
+  width: 50%;
+  margin: 0 auto;
+}
+.small-box {
+  height: 15px;
+  width: 15px;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+}
+section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ronaldo {
+  height: 80px;
+  min-width: 80px;
+  background-size: cover;
+  border-radius: 50%;
+  background-image: url('http://gsports.live/football/wp-content/uploads/sites/2/2016/08/Cristiano-Ronaldo-300x300.jpg');
+}
+.messi {
+  height: 80px;
+  min-width: 80px;
+  background-size: cover;
+  border-radius: 50%;
+  background-image: url('https://www.mykhel.com/thumb/250x90x250/football/players/4/19054.jpg');
+  position: relative;
+}
+.message {
+  padding: 20px;
+  position: relative;
+}
+section:nth-child(odd) .message {
+  background-color: #eaeaea;
+  border-radius: 20px 20px 25px 0;
+  margin-left: 20px;
+}
+section:nth-child(even) .message {
+  background-color: green;
+  margin-right: 20px;
+  border-radius: 20px 20px 0 25px;
+}
+section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+section:nth-child(even) p {
+  color: white;
+}
+section:nth-child(odd) .small-box {
+  background-color: #eaeaea;
+  transform: translate(-50%, -50%) rotate(45deg);
+  left: 0;
+}
+section:nth-child(even) .small-box {
+  background-color: green;
+  transform: translate(50%, -50%) rotate(45deg);
+  right: 0;
+}
+section:nth-child(odd):hover {
+  transform: translateX(3%);
+  transition: 1s;
+}
+section:nth-child(even):hover {
+  transform: translateX(-3%);
+  transition: 1s;
+}

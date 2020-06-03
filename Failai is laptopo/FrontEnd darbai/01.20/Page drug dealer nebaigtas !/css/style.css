@@ -1,0 +1,154 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.filter {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(255, 255, 255, 0.5));
+}
+header {
+  height: 100vh;
+  background-image: url('../assets/mountains.jpg');
+  background-size: cover;
+}
+nav{
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img {
+  height: 8vh;
+}
+nav div a:not(:last-of-type) {
+  margin-right: 20px;
+}
+nav div a {
+  color: grey;
+  text-decoration: none;
+}
+header .wrapper div {
+  text-align: center;
+}
+header .wrapper div img {
+  height: 40vh;
+}
+header h2 {
+  margin: 40px 0;
+  font-size: 30px;
+}
+header h1 {
+  font-size: 25px;
+}
+header h1, header h2, header h3 {
+  letter-spacing: 3px;
+  color: white;
+}
+.arrow-down {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 60px;
+}
+.pricing {
+  height: 60vh;
+  background: linear-gradient(rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.3));
+}
+.pricing .wrapper {
+  text-align: center;
+  margin-top: 80px;
+}
+.pricing p {
+  line-height: 30px;
+}
+.pricing h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pricing h3:after, .pricing h3:before {
+  content: '';
+  width: 40%;
+  background: black;
+  height: 1px;
+}
+.boxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.boxes .small-box, .boxes .large-box {
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  background: white;
+}
+.large-box h4 {
+  color: blue;
+}
+.large-box p {
+  color: red;
+}
+.boxes h4 {
+  font-size: 20px;
+}
+.small-box {
+  width: 25%;
+}
+.large-box {
+  width: 30%;
+}
+.boxes p {
+  padding: 0 5px 11px;
+  /* margin: 10px 0; */
+}
+.plans {
+  height: 30vh;
+background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 1));
+}
+.plans .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.plans .small-box, .plans .large-box {
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  background: white;
+}
+.plans ul {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  line-height: 30px;
+  margin: 0;
+}
+.plans li {
+border-bottom: 1px solid grey;
+}
+.plans li:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.small-box li:last-child {
+  background: blue;
+}
+.large-box li:last-child {
+  background: red;
+}
+.plans h3, .plans h2, .plans a {
+  color: white;
+}
+.plans h3::before, .plans h2::before {
+  content: '\20AC';
+}
+.plans h3::after, .plans h2::after {
+  content: '/month';
+}

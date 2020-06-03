@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+h1, h3 {
+  text-align: center;
+}
+body {
+  background-color: orange;
+  padding: 9px;
+  height: 97vh;
+  width: 98.5vw;
+}
+main {
+  height: 76%;
+  width: 100%;
+}
+.column {
+  float: left;
+  height: 100%;
+  background-color: #c8c8c8;
+}
+.side {
+  width: 19.3%;
+}
+.middle {
+  width: 58%;
+}
+.lower {
+  height: 9%;
+  width: 99.6%;
+  margin-top: 1%;
+}
+.upper {
+  height: 9.4%;
+  width: 99.6%;
+  margin-bottom: 1%;
+}
+section header {
+  padding: 15px;
+}
+section article {
+  padding: 125px;
+}
+section footer {
+  padding: 15px;
+}
+.border {
+  border-radius: 10px;
+  border: 3px solid grey;
+}
+.margin {
+  margin: 10px 15px 10px;
+}
+.color {
+  background-color: #c8c8c8;
+}
+section {
+  margin: 0 1%;
+}

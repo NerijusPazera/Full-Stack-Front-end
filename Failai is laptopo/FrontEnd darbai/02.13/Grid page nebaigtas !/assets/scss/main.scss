@@ -1,0 +1,29 @@
+@use 'reset';
+
+body {
+  margin: 20px;
+  background-color: #00ae64;
+}
+
+main {
+  display: grid;
+  grid-gap: 20px;
+}
+section {
+  display: grid;
+  grid-gap: 20px;
+}
+article {
+  background-color: white;
+}
+.image {
+  background-image: url('https://lh3.googleusercontent.com/proxy/5gCHYYNzVFhkw-IV4svoQuRu255BsJSj_K3zEMs3if_MoqZytbR3cWQDRa2Bz-xWOCwiwn-iw2NWJBpLCP2ndPCXZwYf2Wrh4pJYzJueYGF4sB_V3G1YuNqewl8');
+}
+.img-container {
+
+}
+.bottom-text-container {
+  display: grid;
+  grid: 1fr / 1fr 2fr 1fr;
+  justify-content: space-between;
+}

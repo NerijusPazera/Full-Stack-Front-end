@@ -1,0 +1,24 @@
+.square {
+  width: 20px;
+  height: 20px;
+  background: red;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation-name: movement;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes movement {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    left: 100%;
+    top: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

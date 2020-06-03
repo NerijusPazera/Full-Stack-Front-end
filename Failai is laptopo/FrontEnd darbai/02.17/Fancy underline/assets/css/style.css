@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+*:not(i), *::after:not(i), *::before:not(i) {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-container span {
+  background-image: linear-gradient(black, black);
+  background-position: 0 bottom;
+  background-size: 0 3px;
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+.text-container span:hover {
+  background-size: 100% 3px;
+}
+
+.container {
+  display: grid;
+  grid: auto-flow/repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,8 @@
+@mixin rounded {
+  border-radius: 10px;
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

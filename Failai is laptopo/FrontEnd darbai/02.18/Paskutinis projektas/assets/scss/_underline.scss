@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+.details {
+  span {
+    color: $white;
+    background-image: linear-gradient($white, $white);
+    background-position: 0 bottom;
+    background-size: 0 .1em;
+    background-repeat: no-repeat;
+    transition: 0.2s;
+
+
+    &:hover {
+    background-size: 100% .1em;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'navigation';
+@use 'footer';
+@use 'button';
+
+body {
+  margin: 0;
+  background-color: $primary-color;
+}
+.clear {
+  @extend %button;
+}
+.filled {
+  @extend %button;
+  background-color: black;
+  color: white;
+}
+.borderless {
+  @extend %button;
+  border: none;
+}
+ button {
+   @include rounded;
+   @include size(100px, 50px);
+   background: white;
+   border: 1px solid black;
+   padding: 10px;
+ }

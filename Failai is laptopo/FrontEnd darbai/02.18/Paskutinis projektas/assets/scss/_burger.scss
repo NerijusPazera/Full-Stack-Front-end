@@ -1,0 +1,40 @@
+@use 'variables' as *;
+
+%burger {
+  height: 2em;
+  width: 2em;
+  position: relative;
+  cursor: pointer;
+
+  .burger-line {
+    height: 5px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 5px;
+    position: absolute;
+  }
+  .burger-line:nth-child(1) {
+    transition: 0.3s;
+    top: 0;
+  }
+  .burger-line:nth-child(2) {
+    transition: 0.1s;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .burger-line:nth-child(3) {
+    transition: 0.5s;
+    bottom: 0;
+  }
+  &:hover .burger-line:nth-child(1) {
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+  }
+  &:hover .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  &:hover .burger-line:nth-child(3) {
+    transform: translateY(50%) rotate(-45deg);
+    bottom: 50%;
+  }
+}
