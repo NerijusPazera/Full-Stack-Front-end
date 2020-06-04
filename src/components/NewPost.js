@@ -2,7 +2,6 @@ import {h, Component} from "../vdom/bootloader";
 import Button from "./Button";
 import Input from "./Input";
 
-
 export class NewPost extends Component {
   constructor(props) {
     super(props);
@@ -41,9 +40,10 @@ export class NewPost extends Component {
 
   render() {
     return h('form', {class: 'form', submit: this.handleSubmit},
-          h('h3', {}, 'Enter New'),
-          h(Input, {class: 'topic', placeholder: 'Topic', handler: this.handleTopic}),
-          h(Input, {class: 'para', placeholder: 'Your Story...', handler: this.handlePara}),
-          h(Button, {class: 'submit-btn', name: 'submit'}));
+        h('h3', {}, 'Enter New'),
+        h(Input, {class: 'topic', placeholder: 'Topic', handler: this.handleTopic}),
+        h(Input, {class: 'para', placeholder: 'Your Story...', handler: this.handlePara}),
+        h(Button, {class: 'submit-btn', name: 'submit'})
+    );
   }
 }

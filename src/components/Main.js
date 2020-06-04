@@ -1,5 +1,6 @@
 import {h, Component} from "../vdom/bootloader";
 import {NewPost} from "./NewPost";
+import {Article} from "./Article";
 
 export class Main extends Component {
   constructor(props) {
@@ -7,10 +8,13 @@ export class Main extends Component {
 
     this.state.articles = [];
     this.fetchData();
+    this.state.isLoading = true;
+
     this.addPost = this.addPost.bind(this);
     this.postData = this.postData.bind(this);
     this.deletePost = this.deletePost.bind(this);
     this.fetchData = this.fetchData.bind(this);
+    this.setData = this.setData.bind(this);
   }
 
   fetchData() {
@@ -20,7 +24,7 @@ export class Main extends Component {
   }
 
   setData(data) {
-    this.setState({articles: data});
+    this.setState({articles: data, isLoading: false});
   }
 
   postData(myData) {
@@ -41,40 +45,53 @@ export class Main extends Component {
     this.setState({articles: updatedState});
   }
 
-  deletePost(e) {
-    const postId = e.target.attributes.postId.value;
+  showDelete(e) {
+    e.target.lastChild.style = 'display: block';
+  }
 
-    fetch(`http://rest.stecenka.lt/api/posts/${postId}`, {
+  hideDelete(e) {
+    e.target.lastChild.style = 'display: none';
+  }
+
+  async deletePost(id) {
+    const response = await fetch(`http://rest.stecenka.lt/api/posts/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json'
       }
-    })
-        .then(this.fetchData);
+    });
+
+    const result = await response.json();
+    if (result) {
+      const foundId = this.state.articles.findIndex(article => article.id === id);
+      this.state.articles.splice(foundId, 1);
+      this.setData(this.state.articles);
+    }
   }
 
   render() {
     const articlesArray = this.state.articles.map(artc => {
-      return h('article', {},
-          h('h2', {}, artc.title),
-          h('p', {}, artc.body),
-          h('i',
-              {
-                class: 'fas fa-trash-alt',
-                click: this.deletePost,
-                postId: artc.id
-              }
-          )
+      return h(Article,
+          {
+            handleShow: this.showDelete,
+            handleHide: this.hideDelete,
+            handleDelete: this.deletePost,
+            title: artc.title,
+            body: artc.body,
+            id: artc.id
+          }
       )
     });
 
-    if (articlesArray.length !== 0) {
+    if (!this.state.isLoading) {
       return h('div', {class: 'articles-container'},
           ...articlesArray,
-          h(NewPost, {handler: this.postData}));
+          h(NewPost, {handler: this.postData})
+      );
     } else {
       return h('div', {class: 'spinner-container'},
-          h('div', {class: 'spinner'}));
+          h('div', {class: 'spinner'})
+      );
     }
   }
 }
